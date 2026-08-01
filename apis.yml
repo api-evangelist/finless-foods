@@ -1,8 +1,21 @@
 aid: finless-foods
-name: FInless Foods
-description: 'FInless Foods is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: Finless Foods
+description: 'Finless Foods is an Emeryville, California cellular-agriculture company
+  founded in 2017 by Michael Selden and Brian Wyrwas to grow real seafood from fish
+  cells instead of harvesting it from the ocean. Its scientists established proprietary
+  marine cell lines and a culture-media and bioreactor process that cultivates bluefin
+  tuna and other high-value species into three-dimensional tissue with comparable taste,
+  texture and nutrition to wild-caught fish, and the company has also shipped a plant-based
+  tuna alternative into foodservice while the cell-cultivated line moves toward regulatory
+  clearance and commercial launch. Backed by SOSV/IndieBio and a USD 34 million Series
+  B closed in March 2022, and now led by co-founder and CEO Brandon Chen with co-founder
+  Brian Wyrwas as CSO, Finless Foods is a food-biotechnology and consumer-products business
+  rather than a software vendor: it operates a single-page Squarespace marketing site
+  with a Squarespace Commerce cart, publishes no developer portal, no API documentation
+  and no machine-readable API contract, and its 2017-era GitHub organization holds one
+  dormant static-HTML repository.'
 url: https://raw.githubusercontent.com/api-evangelist/finless-foods/refs/heads/main/apis.yml
+image: https://avatars.githubusercontent.com/u/25592045?v=4
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,12 +25,55 @@ created: '2026-08-01'
 modified: '2026-08-01'
 tags:
 - Company
+- Cellular Agriculture
+- Cell-Cultured Seafood
+- Alternative Protein
+- Food Technology
+- Biotechnology
+- Sustainability
+- Consumer Packaged Goods
+- United States
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-08-01'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
 common:
+- type: DomainSecurity
+  url: security/finless-foods-domain-security.yml
+- type: WellKnown
+  url: well-known/finless-foods-well-known.yml
+- type: Packages
+  url: packages/finless-foods-packages.yml
+- type: Conformance
+  url: conformance/finless-foods-conformance.yml
+- type: LLMsTxt
+  url: llms/finless-foods-llms.txt
 - type: Website
+  url: https://finlessfoods.com/
+- type: Support
+  url: mailto:info@finlessfoods.com
+- type: GitHubOrganization
+  url: https://github.com/finlessfoods
+- type: LinkedIn
+  url: https://www.linkedin.com/company/finlessfoods/
+- type: Instagram
+  url: https://www.instagram.com/finlessfoods/
+- type: Facebook
+  url: https://www.facebook.com/finlessfoods
+- type: Wikipedia
+  url: https://en.wikipedia.org/wiki/Finless_Foods
+- type: Crunchbase
+  url: https://www.crunchbase.com/organization/finless-foods
+- type: Newsletter
+  url: https://mailchi.mp/finlessfoods/z6fk1k1wdj
+- type: Investment
+  url: https://republic.com/finless-foods
+- type: SecondaryMarket
   url: https://forgeglobal.com/finless-foods_stock/

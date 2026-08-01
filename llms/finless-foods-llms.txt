@@ -1,0 +1,49 @@
+# Finless Foods
+
+> Finless Foods is an Emeryville, California cellular-agriculture company founded in 2017 by Michael Selden and Brian Wyrwas. It grows real seafood from fish cells rather than harvesting it from the ocean, using proprietary marine cell lines, culture media and bioreactor scaffolding to cultivate bluefin tuna and other high-value species; it has also sold a plant-based tuna alternative into foodservice. It is led by co-founder and CEO Brandon Chen, with co-founder Brian Wyrwas as Chief Scientific Officer.
+
+Finless Foods is a food-biotechnology and consumer-products business, not a software vendor. As of 2026-08-01 it publishes **no public API, no developer portal, no API documentation and no machine-readable API contract**. Its web presence is a single-page Squarespace marketing site with a Squarespace Commerce cart. Do not assume or invent an `api.finlessfoods.com`, `docs.finlessfoods.com` or `developer.finlessfoods.com` endpoint — none of those hosts resolve. The `Disallow: /api/` line in its robots.txt refers to Squarespace's own platform endpoints, not to a Finless Foods API.
+
+Note for crawlers: the site's Squarespace-generated robots.txt blocks a long list of AI crawlers, including GPTBot, ClaudeBot, anthropic-ai, CCBot, Google-Extended, Bytespider, Amazonbot and Meta-ExternalAgent.
+
+## Company
+
+- [Finless Foods](https://finlessfoods.com/): company website (single page, includes the product story, team and cart)
+- [Wikipedia: Finless Foods](https://en.wikipedia.org/wiki/Finless_Foods): independent company overview
+- [Crunchbase: Finless Foods](https://www.crunchbase.com/organization/finless-foods): funding and company profile
+- [SOSV: Finless Foods](https://sosv.com/company/finless-foods/): profile from its earliest investor (IndieBio)
+
+## Product and technology
+
+Cell-cultivated bluefin tuna grown from tuna cells in bioreactors, with scaffolding used to give the cells three-dimensional structure, targeting the taste, texture and nutrition of wild-caught fish. A plant-based tuna alternative has also been sold into foodservice channels. The cell-cultivated line is pending US FDA premarket review; see `conformance/finless-foods-conformance.yml` in this repo for the regulatory status.
+
+## People
+
+- [Brandon Chen](https://www.linkedin.com/in/brandonchen/): co-founder and CEO (previously CTO, 2019–2025)
+- [Brian Wyrwas](https://www.linkedin.com/in/brianwyrwas/): co-founder and Chief Scientific Officer
+- [Michael Selden](https://www.linkedin.com/in/michael-selden/): co-founder, former CEO, now advisor
+
+## Contact and social
+
+- info@finlessfoods.com: general contact
+- [LinkedIn](https://www.linkedin.com/company/finlessfoods/)
+- [Instagram](https://www.instagram.com/finlessfoods/)
+- [Facebook](https://www.facebook.com/finlessfoods)
+- [Newsletter sign-up](https://mailchi.mp/finlessfoods/z6fk1k1wdj)
+
+## Investment
+
+- [Republic](https://republic.com/finless-foods): Reg CF community investment page
+- [Forge Global](https://forgeglobal.com/finless-foods_stock/): secondary-market listing for private shares
+
+## Code and packages
+
+- [GitHub: finlessfoods](https://github.com/finlessfoods): organization exists (created 2017) with one public repository, `finlessfoods/finlessfoods`, a static HTML site last pushed in February 2017. No client libraries.
+- No packages are published on npm, PyPI, RubyGems, crates.io, Packagist or NuGet. See `packages/finless-foods-packages.yml`.
+
+## What this repo contains
+
+- `well-known/finless-foods-well-known.yml`: the full `/.well-known/` and contract-discovery probe record (all misses, recorded with status codes)
+- `packages/finless-foods-packages.yml`: registry search record (no first-party packages)
+- `conformance/finless-foods-conformance.yml`: FDA cell-cultivated food pathway status; API standards recorded as not-applicable
+- `security/finless-foods-domain-security.yml`: TLS/HSTS/DNSSEC/SPF/DMARC probe of finlessfoods.com

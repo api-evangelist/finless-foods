@@ -1,0 +1,36 @@
+generated: '2026-08-01'
+method: searched
+source: registry searches of npm, PyPI, RubyGems, crates.io, Packagist, NuGet (2026-08-01)
+result: none
+notes: >-
+  Finless Foods publishes no client SDK, because it publishes no public API. It is a
+  cellular-agriculture and consumer-food company, not a software vendor. Every registry
+  query below returned either zero results or unrelated fuzzy matches on the string
+  "finless". No `SDKs` pointer is wired in apis.yml and the sdk_count checks are
+  correctly left unearned.
+packages: []
+registries_checked:
+- registry: npm
+  query: finless / finlessfoods
+  result: 0 packages; the @finlessfoods scope does not exist (404)
+- registry: pypi
+  query: finless, finlessfoods, finless-foods
+  result: 404 - no project under any spelling
+- registry: rubygems
+  query: finless
+  result: 0 results
+- registry: crates.io
+  query: finless
+  result: 1 unrelated match (tidk, a telomeric-repeat genome toolkit)
+- registry: packagist
+  query: finless
+  result: 8 unrelated fuzzy matches (finesse/*, philtenno/filessyncgo, yohan/rest-flex-php)
+- registry: nuget
+  query: finless
+  result: 0 hits
+- registry: github
+  query: orgs/finlessfoods
+  result: >-
+    org exists (id 25592045, created 2017-02-06) with 1 public repository -
+    finlessfoods/finlessfoods, a static HTML repo last pushed 2017-02-06, i.e. an
+    abandoned early website. Not a client library.

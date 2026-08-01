@@ -1,0 +1,73 @@
+generated: '2026-08-01'
+method: probed
+source: live probes of /.well-known/ and contract-discovery paths on Finless Foods hosts
+result: >-
+  none - no /.well-known/ document and no machine-readable API contract is published
+  on any Finless Foods host. finlessfoods.com is a single-page Squarespace site with
+  a Squarespace Commerce cart; there is no API host to probe.
+hosts:
+- host: https://finlessfoods.com
+  platform: Squarespace
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    note: >-
+      Squarespace platform 404 with a JSON body ({"message":"security.txt not found"}),
+      i.e. a genuine origin miss rather than the site's HTML 404 page
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /openapi.yaml
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /api-docs
+    status: 404
+  - path: /robots.txt
+    status: 200
+    note: >-
+      Squarespace-generated robots.txt. Disallows /api/ (the Squarespace platform's
+      internal endpoints, not a Finless Foods API) and allows /api/ui-extensions/.
+      Carries the Squarespace AI-crawler block list (GPTBot, ClaudeBot, anthropic-ai,
+      CCBot, Google-Extended, Bytespider, Amazonbot, Meta-ExternalAgent and others).
+  - path: /sitemap.xml
+    status: 200
+    note: sitemap lists exactly one URL - https://finlessfoods.com/home
+- host: https://www.finlessfoods.com
+  note: identical results to the apex host on every path above (same Squarespace origin)
+hosts_that_do_not_resolve:
+- api.finlessfoods.com
+- docs.finlessfoods.com
+- developer.finlessfoods.com
+- dev.finlessfoods.com
+- app.finlessfoods.com
+- portal.finlessfoods.com
+- mcp.finlessfoods.com
+- status.finlessfoods.com
+contract_discovery:
+  openapi: not found
+  graphql: not applicable - no /graphql surface and no API host exists
+  mcp: not found - no hosted MCP server, no mcp. subdomain
+  a2a_agent_card: >-
+    not found - both /.well-known/agent-card.json and the legacy
+    /.well-known/agent.json return 404 on both hosts. No a2a/ artifact is written.
+  conclusion: >-
+    Finless Foods publishes no machine-readable API contract of any kind. This is a
+    completed negative result, not an unfinished probe.
+x-evidence:
+  fetched: '2026-08-01'
+  method: curl GET with redirect-following, 15s timeout, both apex and www hosts
+  dns_method: dig +short A on candidate API/docs subdomains
