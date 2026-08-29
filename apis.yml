@@ -15,6 +15,17 @@ description: 'Finless Foods is an Emeryville, California cellular-agriculture co
   and no machine-readable API contract, and its 2017-era GitHub organization holds one
   dormant static-HTML repository.'
 url: https://raw.githubusercontent.com/api-evangelist/finless-foods/refs/heads/main/apis.yml
+deliveryModel:
+  model: library
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Library · distributed through package registries, no callable service
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://avatars.githubusercontent.com/u/25592045?v=4
 x-type: company
 x-source: harvest:secondary-market
